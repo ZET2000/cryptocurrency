@@ -117,6 +117,23 @@
 
 		}
 
+		#form {
+			display: none;
+			text-align: center;
+		}
+
+		input {
+			width: 65%;
+			outline: none;
+			margin: 10 px 5%;
+			padding: 15px 10px;
+			font-size: 14px;
+			border: 2 solid silver;
+			border-radius: 5px;
+			margin-top: 20px;
+		}
+
+
 
 
 
@@ -125,11 +142,10 @@
 </head>
 <body>
 
-	<form id="form">
-		<div align="center">
+		<div id="main">
 			<h1>Способ оплаты</h1>
 				<div class="paybot">
-					<img width="60" height="60" src="https://imgtr.ee/images/2023/11/02/94bd1bb7bb740b69b5a8b3a40925d66d.jpeg">
+					<img width="60" height="60" src="https://imgtr.ee/images/2023/11/02/94bd1bb7bb740b69b5a8b3a40925d66d.jpeg" id="cp">
 					<p> CryptoBot - комиссия 1%</p>
 				</div>
 				<div class="tonpay">
@@ -147,13 +163,29 @@
 					<p>Через поддержку - комиссия 0%</p>
 				</div>
 		</div>
+		<form id="form">
+			<div class="paybot">
+				<h1>CryptoBot</h1>
+				<img width="60" height="60" src="https://imgtr.ee/images/2023/11/02/94bd1bb7bb740b69b5a8b3a40925d66d.jpeg">
+				<p>CryptoBot - бот для оплаты счета, чтобы пополнить баланс кошелька необходимо указать сумму оплаты</p>
+			</div>
+			<input type="number" placeholder="Count" id="usdt">
+			<button>Оплатить</button>
+		</form>
 			
-		</div>
-	</form>
 
 
 
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script>
+		let tg = window.Telegram.WebApp;
+		let cp = document.getElementById("cp")
+
+		cp.addEventListener("click", () => {
+			document.getElementById("main").style.display = "none";
+			document.getElementById("form").style.display = "block";
+		})
+	</script>
 
 </body>
 </html>
