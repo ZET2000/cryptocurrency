@@ -188,14 +188,14 @@
 			document.getElementById("form").style.display = "block";
 		});
 
-
+		let count = document.getElementById("usdt").value;
 		order.addEventListener("click", () => {
-			let count = document.getElementById("usdt").value;
-			if (count < 0.3) {
+			if (count < 1) {
 				return;
 			}
+			console.log(count)
 
-			tg.sendData(order)
+			tg.sendData(order);
 
 			tg.close();
 		});
@@ -203,8 +203,6 @@
 
 </body>
 </html>
-
-
 
 
 
