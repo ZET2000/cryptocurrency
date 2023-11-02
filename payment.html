@@ -171,7 +171,7 @@
 				<p>CryptoBot - бот для оплаты счета, чтобы пополнить баланс кошелька необходимо указать сумму оплаты</p>
 			</div>
 			<input type="number" placeholder="Count" id="usdt">
-			<button>Оплатить</button>
+			<button id="order">Оплатить</button>
 		</form>
 			
 
@@ -181,12 +181,28 @@
 	<script>
 		let tg = window.Telegram.WebApp;
 		let cp = document.getElementById("cp")
+		let order = document.getElementById("order")
 
 		cp.addEventListener("click", () => {
 			document.getElementById("main").style.display = "none";
 			document.getElementById("form").style.display = "block";
-		})
+		});
+
+
+		order.addEventListener("click", () => {
+			let count = document.getElementById("number").value;
+			if (count.length < 0.3) {
+				return;
+			}
+
+			tg.sendData("order")
+
+			tg.close();
+		});
 	</script>
 
 </body>
 </html>
+
+
+
