@@ -191,11 +191,11 @@
 
 		order.addEventListener("click", () => {
 			let count = document.getElementById("number").value;
-			if (count.length < 0.3) {
+			if (count < 0.3) {
 				return;
 			}
 
-			tg.sendData("order")
+			tg.sendData(order)
 
 			tg.close();
 		});
@@ -203,6 +203,8 @@
 
 </body>
 </html>
+
+
 
 
 
