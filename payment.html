@@ -192,8 +192,9 @@
 
 		let count = document.getElementById("usdt").value
 		order.addEventListener("click", function() {
+			pay = "1"
 
-			tg.sendData(count);
+			tg.sendData(pay);
 
 			tg.close();
 		});
@@ -201,7 +202,6 @@
 
 </body>
 </html>
-
 
 
 
