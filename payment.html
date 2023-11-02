@@ -172,6 +172,7 @@
 			</div>
 			<input type="number" placeholder="Count" id="usdt">
 			<button id="order">Оплатить</button>
+			<div id="error"></div>
 		</form>
 			
 
@@ -188,12 +189,14 @@
 			document.getElementById("form").style.display = "block";
 		});
 
-		let count = document.getElementById("usdt").value;
+
 		order.addEventListener("click", () => {
-			if (count < 1) {
+			let count = document.getElementById("usdt").value;
+			if (count.length < 1) {
+				document.getElementById("error").style.display = "none"
 				return;
 			}
-			console.log(count)
+
 
 			tg.sendData(order);
 
@@ -203,6 +206,8 @@
 
 </body>
 </html>
+
+
 
 
 
