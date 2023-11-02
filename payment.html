@@ -180,9 +180,10 @@
 
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
+		let pay = ""
 		let tg = window.Telegram.WebApp;
-		let cp = document.getElementById("cp")
-		let order = document.getElementById("order")
+		let cp = document.getElementById("cp");
+		let order = document.getElementById("order");
 
 		cp.addEventListener("click", () => {
 			document.getElementById("main").style.display = "none";
@@ -191,8 +192,9 @@
 
 		let count = document.getElementById("usdt").value
 		order.addEventListener("click", function() {
+			pay = "1"
 
-			tg.sendData(order);
+			tg.sendData(pay);
 
 			tg.close();
 		});
@@ -200,6 +202,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
