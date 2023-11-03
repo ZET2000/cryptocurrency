@@ -170,7 +170,7 @@
 				<img width="60" height="60" src="https://imgtr.ee/images/2023/11/02/94bd1bb7bb740b69b5a8b3a40925d66d.jpeg">
 				<p>CryptoBot - бот для оплаты счета, чтобы пополнить баланс кошелька необходимо указать сумму оплаты</p>
 			</div>
-			<input type="number" placeholder="Count" id="usdt">
+			<input type="number" placeholder="Count" id="usdt" min="1" max="100">
 			<button id="order">Оплатить</button>
 			<div id="error"></div>
 		</form>
@@ -191,8 +191,8 @@
 			document.getElementById("form").style.display = "block";
 		});
 
-		let cash = document.getElementById("usdt").value;
-		let amount = cash.toString();
+		let cash = document.querySelector('input[type="number"').value;
+		let amount = parseFloat(cash);
 		order.addEventListener("click", function() {
 			pay = amount;
 
@@ -204,7 +204,6 @@
 
 </body>
 </html>
-
 
 
 
