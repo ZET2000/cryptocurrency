@@ -225,17 +225,18 @@
 			document.getElementById("form").style.display = "block";
 		});
 
-		order.addEventListener("click", function() {
+		order.addEventListener("click", () => {
 			pay = pay + 1;
 			document.getElementById("usdt").value=(pay);
-			return;
+
 
 		});
 
-		all.addEventListener("click", function(){
-			pay.toString();
+		all.addEventListener("click", () => {
+			out = pay.toString();
+			console.log(out)
 
-			tg.sendData(pay);
+			tg.sendData(out);
 
 			tg.close();
 
@@ -247,11 +248,6 @@
 
 </body>
 </html>
-
-
-
-
-
 
 
 
