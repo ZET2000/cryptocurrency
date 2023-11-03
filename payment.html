@@ -226,14 +226,15 @@
 		});
 
 		order.addEventListener("click", function() {
-			out = pay + 1;
+			pay = pay + 1;
 			document.getElementById("usdt").value=(out);
 
 		});
 
 		all.addEventListener("click", function(){
+			pay.toString();
 
-			tg.sendData(out);
+			tg.sendData(pay);
 
 			tg.close();
 
@@ -245,10 +246,6 @@
 
 </body>
 </html>
-
-
-
-
 
 
 
