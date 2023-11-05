@@ -182,8 +182,13 @@
 
 		#qiwiim {
 			border: 5px solid skyblue;
-			border-radius: 50px;
+			border-radius: 40px;
 			margin-top: 10px;
+		}
+
+		#toncoin {
+			margin-top: 20px;
+			margin-bottom: 15px;
 		}
 
 
@@ -221,16 +226,19 @@
 
 		<form id="form">
 			<div class="paybot">
-				<h1>CryptoBot</h1>
-				<img width="60" height="60" src="https://imgtr.ee/images/2023/11/02/94bd1bb7bb740b69b5a8b3a40925d66d.jpeg">
-				<p>CryptoBot - бот для оплаты счета, чтобы пополнить баланс кошелька необходимо указать сумму оплаты</p>
+				<h1>Tonkeeper</h1>
+				<img width="60" height="60" src="https://cryptologos.cc/logos/toncoin-ton-logo.png">
+				<p>Tonkeeper - криптокошелек сети TON, пополняйте счет (TON). USDT зачисляются по текущему курсу с учетом комиссии</p>
 			</div>
-			<input type="text" placeholder="Count" id="usdt" min="1" max="100" disabled="disabled">
 			<div>
-				<button class="num" id="plus">+</button>
+				<h3 id="toncoin">EQBH-ae8zoUBHVfIVpvFK0-CQXmfcq4CTWNZIOXpBBomoyiZ</h3>
 			</div>
-			<button id="order">Оплатить</button>
-			<div id="error"></div>
+			<div>
+				<p>⚠️ Переведите TON по данному адресу, сохраняйте чек до зачисления средств</p>
+			</div>
+			<div>
+				<img id="qiwiim" width="200" height="200" src="https://i.ibb.co/QFBg0rP/photo-2023-11-05-19-36-33.jpg">
+			</div>
 		</form>
 
 
