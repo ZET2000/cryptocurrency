@@ -191,6 +191,11 @@
 			margin-bottom: 15px;
 		}
 
+		#payeer {
+			display: none;
+			text-align: center;
+		}
+
 
 
 
@@ -209,7 +214,7 @@
 					<p> Tonkeeper - комиссия 1.5%</p>
 				</div>
 				<div class="tonpay">
-					<img width="60" height="60" src="https://cdn6.aptoide.com/imgs/b/a/8/ba8c900c1212100bab1cc9b14b9693bd_icon.png">
+					<img width="60" height="60" src="https://cdn6.aptoide.com/imgs/b/a/8/ba8c900c1212100bab1cc9b14b9693bd_icon.png" id="payr">
 					<p>Payeer - комиссия 0.5%</p>
 				</div>
 				<div class="qiwi">
@@ -259,6 +264,23 @@
 			</div>
 			<button type="reset" onclick="location.href='https://qiwi.com/n/ZETPRIME'">Оплатить</button>
 		</form>
+
+		<form id="payeer">
+			<div class="qiwipay">
+				<h1>Payeer</h1>
+				<img width="60" height="60" src="https://cdn6.aptoide.com/imgs/b/a/8/ba8c900c1212100bab1cc9b14b9693bd_icon.png">
+				<p>Payeer - электронная форма оплаты, пополняйте счет (RUB, EUR, USD). USDT зачисляются по текущему курсу</p>
+			</div>
+			<div>
+				<h3 id="userid"></h3>
+			</div>
+			<div>
+				<p>⚠️ При оплате обязательно указывайте ID</p>
+			</div>
+			<div>
+				<img id="qiwiim" width="200" height="200" src="https://i.ibb.co/3mLFPSf/photo-2023-11-05-20-42-05.jpg">
+			</div>
+		</form>
 			
 
 
@@ -273,6 +295,7 @@
 		let order = document.getElementById("plus");
 		let all = document.getElementById("order");
 		let userid = document.getElementById("userid")
+		let payr = document.getElementById("payr");
 		tg.expand();
 
 		cp.addEventListener("click", () => {
@@ -283,6 +306,10 @@
 			document.getElementById("main").style.display = "none";
 			document.getElementById("qiwi").style.display = "block";
 			userid.innerText = `${tg.initDataUnsafe.user.id}`;
+		});
+		payr.addEventListener("click", () => {
+			document.getElementById("main").style.display = "none"
+			document.getElementById("payeer").style.display = "block"
 		});
 
 
@@ -312,6 +339,7 @@
 
 </body>
 </html>
+
 
 
 
