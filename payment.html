@@ -189,16 +189,12 @@
 		<div id="main">
 			<h1>Способ оплаты</h1>
 				<div class="paybot">
-					<img width="60" height="60" src="https://imgtr.ee/images/2023/11/02/94bd1bb7bb740b69b5a8b3a40925d66d.jpeg" id="cp">
+					<img width="60" height="60" src="https://novator.io/wp-content/uploads/2022/04/Razrabotchiki-Crypto-Bot-zapustili-kriptobirzhu-v-Telegram.jpg" id="cp">
 					<p> CryptoBot - комиссия 1%</p>
 				</div>
 				<div class="tonpay">
 					<img width="60" height="60" src="https://cdn.filestackcontent.com/i0MsLUUJTpmlYBeOA3rv">
 					<p>xRocket - комиссия 0.5%</p>
-				</div>
-				<div class="qiwi">
-					<img width="60" height="60" src="https://www.svgrepo.com/show/367167/qiwi.svg" id="qiwipaym">
-					<p>Qiwi - комиссия 5%</p>
 				</div>
 				<div class="tp">
 					<a href="https://t.me/techno_support">
@@ -223,19 +219,6 @@
 		</form>
 
 
-		<form id="qiwi">
-			<div class="qiwipay">
-				<h1>Qiwi кошелек</h1>
-				<img width="60" height="60" src="https://www.svgrepo.com/show/367167/qiwi.svg">
-				<p>Qiwi кошелек - электронная форма оплаты, пополняйте счет (RUB, EUR, USD, KZT). USDT зачисляются по текущему курсу</p>
-			</div>
-			<div>
-				<h3 id="userid"></h3>
-			</div>
-		</form>
-			
-
-
 
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
@@ -246,18 +229,13 @@
 		let cp = document.getElementById("cp");
 		let order = document.getElementById("plus");
 		let all = document.getElementById("order");
-		let userid = document.getElementById("userid")
 		tg.expand();
 
 		cp.addEventListener("click", () => {
 			document.getElementById("main").style.display = "none";
 			document.getElementById("form").style.display = "block";
 		});
-		qiwi.addEventListener("click", () => {
-			document.getElementById("main").style.display = "none";
-			document.getElementById("qiwi").style.display = "block";
-			userid.innerText = `${tg.initDataUnsafe.user.id}`;
-		});
+
 
 
 
@@ -286,7 +264,6 @@
 
 </body>
 </html>
-
 
 
 
