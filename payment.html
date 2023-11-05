@@ -242,11 +242,11 @@
 		let out = ""
 		let pay = 0
 		let tg = window.Telegram.WebApp;
-		let userid = getElementById("userid");
 		let qiwi = document.getElementById("qiwipaym");
 		let cp = document.getElementById("cp");
 		let order = document.getElementById("plus");
 		let all = document.getElementById("order");
+		let userid = document.getElementById("userid");
 		tg.expand();
 
 		cp.addEventListener("click", () => {
@@ -256,7 +256,7 @@
 		qiwi.addEventListener("click", () => {
 			document.getElementById("main").style.display = "none";
 			document.getElementById("qiwi").style.display = "block";
-			userid.innerText = `${tg.initDataUnsafe.user.user_id}`;
+			userid.innerText = tg.initDataUnsafe.user.user_id
 		});
 
 
@@ -277,6 +277,7 @@
 			tg.close();
 
 		});
+
 
 
 
