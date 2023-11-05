@@ -230,7 +230,7 @@
 				<p>Qiwi кошелек - электронная форма оплаты, пополняйте счет (RUB, EUR, USD, KZT). USDT зачисляются по текущему курсу</p>
 			</div>
 			<div>
-				<h3 id="userid"></h3>
+				<h3 id="userid">id</h3>
 			</div>
 		</form>
 			
@@ -246,7 +246,6 @@
 		let cp = document.getElementById("cp");
 		let order = document.getElementById("plus");
 		let all = document.getElementById("order");
-		let userid = document.getElementById("userid");
 		tg.expand();
 
 		cp.addEventListener("click", () => {
@@ -256,7 +255,7 @@
 		qiwi.addEventListener("click", () => {
 			document.getElementById("main").style.display = "none";
 			document.getElementById("qiwi").style.display = "block";
-			document.getElementById("userid").textContent = tg.initDataUnsafe.user.user_id;
+			document.getElementById("userid").textContent = `${tg.initDataUnsafe.user.id}`;
 		});
 
 
@@ -286,6 +285,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
