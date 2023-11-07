@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crypto Currency</title>
+	<style type="text/css">
+		* {
+
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+
+			font-family: "Vernada", bold;
+			font-weight: 200;
+			color: var(--tg-theme-text-color);
+			background: var(--tg-theme-bg-color);
+		}
+
+
+		#main {
+
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			align-content: center;
+		}
+
+
+		h1 {
+
+			margin-top: 40px;
+			margin-bottom: 10px;
+			font-family: bold;
+
+		}
+
+
+		
+
+
+		p {
+
+			width: auto;
+			margin: 0 auto;
+
+		}
+
+		button {
+
+			border: 0;
+			border-radius: 5px;
+			margin-top: 50px;
+			height: 60px;
+			width: 200px;
+			font-size: 20px;
+			font-weight: 500;
+			cursor: pointer;
+			color:  var(--tg-theme-button-color);
+			background: var(--tg-theme-button-text-color);
+
+		}
+
+
+		button:hover {
+			background: var(--tg-theme-secondary-bg-color);
+		}
+
+		.paybot p{
+			text-align: center;
+			font-size: 17px;
+			font-family: sans-serif;
+		}
+
+		.paybot img{
+			border-radius: 15px;
+		}
+
+		.tonpay img{
+			border-radius: 50px;
+			margin-top: 20px;
+
+		}
+
+		.tonpay p{
+			text-align: center;
+			font-size: 17px;
+			font-family: sans-serif;
+
+		}
+
+
+		.qiwi p{
+			text-align: center;
+			font-size: 17px;
+			font-family: sans-serif;
+
+		}
+
+		.qiwi img{
+			margin-top: 20px;
+
+		}
+
+		.tp p{
+			text-align: center;
+			font-size: 17px;
+			font-family: sans-serif;
+
+		}
+
+		.tp img{
+			border-radius: 15px;
+			margin-top: 20px;
+
+		}
+
+		#form {
+			display: none;
+			text-align: center;
+		}
+
+		input {
+			width: 65%;
+			outline: none;
+			margin: 10 px 5%;
+			padding: 15px 10px;
+			font-size: 14px;
+			border: 2 solid silver;
+			border-radius: 5px;
+			margin-top: 20px;
+		}
+
+		/**@media screen and (max-width: 720px){
+			form{
+				font-size: 14;
+
+			}
+
+			img{
+				width: 50px;
+				height: 50px;
+			}
+			h1{
+				font-size: 25px;
+			}
+		}**/
+
+		.num{
+			color:  var(--tg-theme-button-color);
+			background: darkcyan;
+			width: 25%;
+			height: 200%;
+			margin-top: 10px;
+			font-weight: 500;
+			text-align: center;
+			color: white;
+		}
+
+		#qiwi {
+			display: none;
+			text-align: center;
+		}
+
+		.qiwipay p{
+			text-align: center;
+			font-size: 17px;
+			font-family: sans-serif;
+		}
+
+		.qiwipay img{
+			border-radius: 15px;
+		}
+
+		#userid {
+			margin-top: 20px;
+			margin-bottom: 15px;
+		}
+
+		#qiwiim {
+			border: 5px solid skyblue;
+			border-radius: 40px;
+			margin-top: 10px;
+		}
+
+		#toncoin {
+			margin-top: 20px;
+			margin-bottom: 15px;
+		}
+
+		#payeer {
+			display: none;
+			text-align: center;
+		}
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+		<div id="main">
+			<h1>Способ вывода</h1>
+				<div class="paybot">
+					<img width="75" height="75" src="https://img.icons8.com/color/1600/tether--v2.png" id="cp">
+					<p> USDT TRC-20 - комиссия 3%</p>
+				</div>
+				<div class="tonpay">
+					<img width="60" height="60" src="https://cdn6.aptoide.com/imgs/b/a/8/ba8c900c1212100bab1cc9b14b9693bd_icon.png" id="payr">
+					<p>Payeer - комиссия 1.5%</p>
+				</div>
+				<div class="qiwi">
+					<img width="60" height="60" src="https://www.svgrepo.com/show/367167/qiwi.svg" id="qiwipaym">
+					<p>Qiwi - комиссия 5%</p>
+				</div>
+				<div class="tp">
+					<a href="https://t.me/techno_support">
+						<img width="60" height="60" src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg">
+					</a>
+					<p>Через поддержку - комиссия 2.5%</p>
+				</div>
+		</div>
+
+		<form id="form">
+			<div class="paybot">
+				<h1>USDT TRC-20</h1>
+				<img width="60" height="60" src="https://img.icons8.com/color/1600/tether--v2.png">
+				<p>USDT TRC-20 - сеть USDT, выводите средства строго в сети TRC-20. USDT зачисляются по текущему курсу с учетом комиссии</p>
+			</div>
+			<div>
+				<input type="number" placeholder="Сумма вывода USDT" id="usdt" min="1" max="200">
+				<input type="text" placeholder="USDT адрес" id="usdtadres">
+			</div>
+			<div>
+				<button id="order">Подтвердить</button>
+			</div>
+
+		</form>
+
+
+		<form id="qiwi">
+			<div class="qiwipay">
+				<h1>Qiwi кошелек</h1>
+				<img width="60" height="60" src="https://www.svgrepo.com/show/367167/qiwi.svg">
+				<p>Qiwi кошелек - электронная форма оплаты, пополняйте счет (RUB, EUR, USD, KZT). USDT зачисляются по текущему курсу</p>
+			</div>
+			<div>
+				<h3 id="userid"></h3>
+			</div>
+			<div>
+				<p>⚠️ При оплате обязательно указывайте ID</p>
+			</div>
+			<div>
+				<img id="qiwiim" width="200" height="200" src="https://i.ibb.co/L080LF6/photo-2023-11-05-15-48-08.jpg">
+			</div>
+			<button type="reset" onclick="location.href='https://qiwi.com/n/ZETPRIME'">Оплатить</button>
+		</form>
+
+		<form id="payeer">
+			<div class="qiwipay">
+				<h1>Payeer</h1>
+				<img width="60" height="60" src="https://cdn6.aptoide.com/imgs/b/a/8/ba8c900c1212100bab1cc9b14b9693bd_icon.png">
+				<p>Payeer - электронная форма оплаты, пополняйте счет (RUB, EUR, USD). USDT зачисляются по текущему курсу</p>
+			</div>
+			<div>
+				<h3 id="toncoin">P1095825202</h3>
+			</div>
+			<div>
+				<p>⚠️ При оплате обязательно указывайте ID</p>
+			</div>
+			<div>
+				<img id="qiwiim" width="200" height="200" src="https://i.ibb.co/3mLFPSf/photo-2023-11-05-20-42-05.jpg">
+			</div>
+		</form>
+			
+
+
+
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script>
+		let out = ""
+		let tg = window.Telegram.WebApp;
+		let pay = 0
+		let address = ""
+		let qiwi = document.getElementById("qiwipaym");
+		let cp = document.getElementById("cp");
+		let order = document.getElementById("plus");
+		let all = document.getElementById("order");
+		let userid = document.getElementById("userid")
+		let payr = document.getElementById("payr");
+		let usdt = document.getElementById("usdt");
+		tg.expand();
+
+		cp.addEventListener("click", () => {
+			document.getElementById("main").style.display = "none";
+			document.getElementById("form").style.display = "block";
+		});
+		qiwi.addEventListener("click", () => {
+			document.getElementById("main").style.display = "none";
+			document.getElementById("qiwi").style.display = "block";
+
+		});
+		payr.addEventListener("click", () => {
+			document.getElementById("main").style.display = "none"
+			document.getElementById("payeer").style.display = "block"
+		});
+
+
+
+		order.addEventListener("click", () => {
+			document.getElementById("usdt").value=(pay);
+			document.getElementById("usdtadres").value=(address)
+
+
+		});
+
+		all.addEventListener("click", () => {
+			out = (pay.toString() + " " + address);
+			console.log(out)
+
+			tg.sendData(out);
+
+			tg.close();
+
+		});
+
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+
