@@ -236,8 +236,8 @@
 				<p>USDT TRC-20 - сеть USDT, выводите средства строго в сети TRC-20. USDT зачисляются по текущему курсу с учетом комиссии</p>
 			</div>
 			<div>
-				<input type="number" placeholder="Сумма вывода USDT" id="usdt" min="1" max="200" value="">
-				<input type="text" placeholder="USDT адрес" id="usdtadres" value="0">
+				<input type="number" placeholder="Сумма вывода USDT" id="usdt" min="1" max="200">
+				<input type="text" placeholder="USDT адрес" id="usdtadres">
 			</div>
 			<div>
 				<button id="order">Подтвердить</button>
@@ -296,7 +296,6 @@
 		let all = document.getElementById("order");
 		let userid = document.getElementById("userid")
 		let payr = document.getElementById("payr");
-		let usdt = document.getElementById("usdt").value;
 		tg.expand();
 
 		cp.addEventListener("click", () => {
@@ -316,18 +315,23 @@
 
 
 		all.addEventListener("click", () => {
-			pay = usdt
-			
-			document.getElementById("usdtadres").value=(address)
-			out = pay.toString();
-			console.log(out)
+			let payusd = document.getElementById("usdt").value
+			let address = document.getElementById("usdtadres").value
 
-			tg.sendData(out);
+			
+			let data = {
+				amount: payusd,
+				address: address
+			} 
+
+
+			tg.sendData(JSON.stringify(data));
 
 			tg.close();
 
 
 		});
+
 
 
 
