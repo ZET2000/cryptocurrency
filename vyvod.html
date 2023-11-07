@@ -172,7 +172,7 @@
 		}
 
 		.qiwipay img{
-			border-radius: 15px;
+			border-radius: 50px;
 		}
 
 		#userid {
@@ -196,6 +196,10 @@
 			text-align: center;
 		}
 
+		#qiwipaym {
+			border-radius: 50px;
+		}
+
 
 
 
@@ -215,11 +219,11 @@
 				</div>
 				<div class="tonpay">
 					<img width="60" height="60" src="https://cdn6.aptoide.com/imgs/b/a/8/ba8c900c1212100bab1cc9b14b9693bd_icon.png" id="payr">
-					<p>Payeer - комиссия 1.5%</p>
+					<p>Payeer - комиссия 3%</p>
 				</div>
 				<div class="qiwi">
-					<img width="60" height="60" src="https://www.svgrepo.com/show/367167/qiwi.svg" id="qiwipaym">
-					<p>Qiwi - комиссия 5%</p>
+					<img width="60" height="60" src="https://i.ibb.co/mSgrP2K/photo-2023-11-07-20-50-10.jpg" id="qiwipaym">
+					<p>Wallet - комиссия 1.5%</p>
 				</div>
 				<div class="tp">
 					<a href="https://t.me/techno_support">
@@ -248,36 +252,31 @@
 
 		<form id="qiwi">
 			<div class="qiwipay">
-				<h1>Qiwi кошелек</h1>
-				<img width="60" height="60" src="https://www.svgrepo.com/show/367167/qiwi.svg">
-				<p>Qiwi кошелек - электронная форма оплаты, пополняйте счет (RUB, EUR, USD, KZT). USDT зачисляются по текущему курсу</p>
+				<h1>Wallet bot</h1>
+				<img width="60" height="60" src="https://i.ibb.co/mSgrP2K/photo-2023-11-07-20-50-10.jpg">
+				<p>Wallet Bot - официальный кошелек, выводите средства строго в сети TRC-20. USDT зачисляются по текущему курсу с учетом комиссии</p>
 			</div>
 			<div>
-				<h3 id="userid"></h3>
+				<input type="number" placeholder="Сумма вывода USDT" id="usdt" min="1" max="200">
+				<input type="text" placeholder="ID в Wallet" id="usdtadres">
 			</div>
 			<div>
-				<p>⚠️ При оплате обязательно указывайте ID</p>
+				<button id="order">Подтвердить</button>
 			</div>
-			<div>
-				<img id="qiwiim" width="200" height="200" src="https://i.ibb.co/L080LF6/photo-2023-11-05-15-48-08.jpg">
-			</div>
-			<button type="reset" onclick="location.href='https://qiwi.com/n/ZETPRIME'">Оплатить</button>
 		</form>
 
 		<form id="payeer">
 			<div class="qiwipay">
 				<h1>Payeer</h1>
 				<img width="60" height="60" src="https://cdn6.aptoide.com/imgs/b/a/8/ba8c900c1212100bab1cc9b14b9693bd_icon.png">
-				<p>Payeer - электронная форма оплаты, пополняйте счет (RUB, EUR, USD). USDT зачисляются по текущему курсу</p>
+				<p>Payeer - выводите средства строго в сети Payeer. USDT в Рублях зачисляются по текущему курсу с учетом комиссии</p>
 			</div>
 			<div>
-				<h3 id="toncoin">P1095825202</h3>
+				<input type="number" placeholder="Сумма вывода USDT" id="usdt" min="1" max="200">
+				<input type="text" placeholder="Номер счета Payeer" id="usdtadres">
 			</div>
 			<div>
-				<p>⚠️ При оплате обязательно указывайте ID</p>
-			</div>
-			<div>
-				<img id="qiwiim" width="200" height="200" src="https://i.ibb.co/3mLFPSf/photo-2023-11-05-20-42-05.jpg">
+				<button id="order">Подтвердить</button>
 			</div>
 		</form>
 			
@@ -321,7 +320,8 @@
 			
 			let data = {
 				amount: payusd,
-				address: address
+				address: address,
+				mode: "USDT TRC-20"
 			} 
 
 
