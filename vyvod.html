@@ -257,11 +257,11 @@
 				<p>Wallet Bot - официальный кошелек, выводите средства строго в сети TRC-20. USDT зачисляются по текущему курсу с учетом комиссии</p>
 			</div>
 			<div>
-				<input type="number" placeholder="Сумма вывода USDT" id="usdt" min="1" max="200">
-				<input type="text" placeholder="ID в Wallet" id="usdtadres">
+				<input type="number" placeholder="Сумма вывода USDT" id="usdtw" min="1" max="200">
+				<input type="text" placeholder="ID в Wallet" id="usdtadresw">
 			</div>
 			<div>
-				<button id="order">Подтвердить</button>
+				<button id="wallet">Подтвердить</button>
 			</div>
 		</form>
 
@@ -272,11 +272,11 @@
 				<p>Payeer - выводите средства строго в сети Payeer. USDT в Рублях зачисляются по текущему курсу с учетом комиссии</p>
 			</div>
 			<div>
-				<input type="number" placeholder="Сумма вывода USDT" id="usdt" min="1" max="200">
-				<input type="text" placeholder="Номер счета Payeer" id="usdtadres">
+				<input type="number" placeholder="Сумма вывода USDT" id="usdtp" min="1" max="200">
+				<input type="text" placeholder="Номер счета Payeer" id="usdtadresp">
 			</div>
 			<div>
-				<button id="order">Подтвердить</button>
+				<button id="payeers">Подтвердить</button>
 			</div>
 		</form>
 			
@@ -295,6 +295,8 @@
 		let all = document.getElementById("order");
 		let userid = document.getElementById("userid")
 		let payr = document.getElementById("payr");
+		let wallet = document.getElementById("wallet");
+		let payeer = document.getElementById("payeers");
 		tg.expand();
 
 		cp.addEventListener("click", () => {
@@ -332,7 +334,36 @@
 
 		});
 
+		wallet.addEventListener("click", () => {
+			let payusdt = document.getElementById("usdtw").value
+			let addressw = document.getElementById("usdtadresw").value
 
+			let data = {
+				amount: payusdt,
+				address: addressw,
+				mode: "@Wallet"
+			}
+
+			tg.sendData(JSON.stringify(data));
+
+			tg.close();
+		});
+
+
+		payeer.addEventListener("click", () => {
+			let payusdtp = document.getElementById("usdtp").value
+			let addressp = document.getElementById("usdtadresp").value
+
+			let data = {
+				amount: payusdtp,
+				address: addressp,
+				mode: "Payeer"
+			}
+
+			tg.sendData(JSON.stringify(data));
+
+			tg.close();
+		});
 
 
 
@@ -340,6 +371,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
