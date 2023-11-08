@@ -128,12 +128,41 @@
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
 		let tg = window.Telegram.WebApp;
+		let red = document.getElementById("buttonred");
+		let green = document.getElementById("buttongreen")
+
+		red.addEventListener("click", () => {
+			let value = Math.floor(Math.random() * 2);
+			if (value == 0) {
+				document.getElementById("netral").style.background = "red";
+				document.getElementById("netral").textContent = "You Win";
+			};
+			if (value == 1) {
+				document.getElementById("netral").textContent = "You Lose";
+			}
+
+		});
+
+		green.addEventListener("click", () => {
+			let value = Math.floor(Math.random() * 2);
+			if (value == 1) {
+				document.getElementById("netral").style.background = "limegreen";
+				document.getElementById("netral").textContent = "You Win";
+			};
+			if (value == 0) {
+				document.getElementById("netral").textContent = "You Lose";
+			}
+
+		});
+
 	</script>
 
 
 
 </body>
 </html>
+
+
 
 
 
