@@ -149,15 +149,17 @@
 		let exit = document.getElementById("button");
 
 		red.addEventListener("click", () => {
-			let value = Math.floor(Math.random() * 2);
+			let value = Math.floor(Math.random() * 3);
 			if (value == 0) {
 				document.getElementById("netral").style.background = "red";
 				document.getElementById("netral").textContent = "You Win";
 				document.getElementById("main").style.display = "none";
 				document.getElementById("result1").style.display = "block";
+				console.log(value);
 				tg.sendData("Победа");
 			};
-			if (value == 1) {
+			if (value != 0) {
+				console.log(value);
 				document.getElementById("netral").textContent = "You Lose";
 				document.getElementById("main").style.display = "none";
 				document.getElementById("result").style.display = "block";
@@ -167,17 +169,19 @@
 		});
 
 		green.addEventListener("click", () => {
-			let value = Math.floor(Math.random() * 2);
+			let value = Math.floor(Math.random() * 3);
 			if (value == 1) {
 				document.getElementById("netral").textContent = "You Win";
 				document.getElementById("main").style.display = "none";
 				document.getElementById("result1").style.display = "block";
+				console.log(value);
 				tg.sendData("Победа");
 			};
-			if (value == 0) {
+			if (value != 1) {
 				document.getElementById("netral").textContent = "You Lose";
 				document.getElementById("main").style.display = "none";
 				document.getElementById("result").style.display = "block";
+				console.log(value)
 				tg.sendData("Поражение");
 			};
 
@@ -193,7 +197,6 @@
 
 </body>
 </html>
-
 
 
 
