@@ -50,7 +50,7 @@
 
 		}
 
-		/*button {
+		#button {
 
 			border: 0;
 			border-radius: 5px;
@@ -65,10 +65,6 @@
 
 		}
 
-
-		button:hover {
-			background: var(--tg-theme-secondary-bg-color);
-		}*/
 
 		#netral {
 			width: 200px;
@@ -106,6 +102,16 @@
 			margin-top: 30px;
 		}
 
+		#result {
+			display: none;
+			text-align: center;
+		}
+
+		#result1 {
+			display: none;
+			text-align: center;
+		}
+
 
 	</style>
 </head>
@@ -124,6 +130,16 @@
 		<button id="buttongreen">Green</button>
 	</div>
 
+	<div id="result">
+		<h1>Поражение</h1>
+		<button id="button">Выход</button>
+	</div>
+
+	<div id="result1">
+		<h1>Победа</h1>
+		<button id="button">Выход</button>
+	</div>
+
 
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
@@ -136,9 +152,13 @@
 			if (value == 0) {
 				document.getElementById("netral").style.background = "red";
 				document.getElementById("netral").textContent = "You Win";
+				document.getElementById("main").style.display = "none";
+				document.getElementById("result1").style.display = "block";
 			};
 			if (value == 1) {
 				document.getElementById("netral").textContent = "You Lose";
+				document.getElementById("main").style.display = "none";
+				document.getElementById("result").style.display = "block";
 			}
 
 		});
@@ -148,9 +168,13 @@
 			if (value == 1) {
 				document.getElementById("netral").style.background = "limegreen";
 				document.getElementById("netral").textContent = "You Win";
+				document.getElementById("main").style.display = "none";
+				document.getElementById("result1").style.display = "block";
 			};
 			if (value == 0) {
 				document.getElementById("netral").textContent = "You Lose";
+				document.getElementById("main").style.display = "none";
+				document.getElementById("result").style.display = "block";
 			}
 
 		});
@@ -161,7 +185,6 @@
 
 </body>
 </html>
-
 
 
 
