@@ -146,6 +146,7 @@
 		let tg = window.Telegram.WebApp;
 		let red = document.getElementById("buttonred");
 		let green = document.getElementById("buttongreen")
+		let exit = document.getElementById("button")
 
 		red.addEventListener("click", () => {
 			let value = Math.floor(Math.random() * 2);
@@ -154,11 +155,13 @@
 				document.getElementById("netral").textContent = "You Win";
 				document.getElementById("main").style.display = "none";
 				document.getElementById("result1").style.display = "block";
+				tg.sendData("Победа");
 			};
 			if (value == 1) {
 				document.getElementById("netral").textContent = "You Lose";
 				document.getElementById("main").style.display = "none";
 				document.getElementById("result").style.display = "block";
+				tg.sendData("Поражение");
 			}
 
 		});
@@ -170,13 +173,19 @@
 				document.getElementById("netral").textContent = "You Win";
 				document.getElementById("main").style.display = "none";
 				document.getElementById("result1").style.display = "block";
+				tg.sendData("Победа");
 			};
 			if (value == 0) {
 				document.getElementById("netral").textContent = "You Lose";
 				document.getElementById("main").style.display = "none";
 				document.getElementById("result").style.display = "block";
+				tg.sendData("Поражение");
 			}
 
+		});
+
+		exit.addEventListener("click", () => {
+			tg.close();
 		});
 
 	</script>
@@ -185,6 +194,10 @@
 
 </body>
 </html>
+
+
+
+
 
 
 
