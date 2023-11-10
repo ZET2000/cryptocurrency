@@ -131,7 +131,7 @@
 
 		}
 
-		#p {
+		#p0 {
 			color: white;
 			font-size: 30px;
 			font-family: sans-serif;
@@ -377,7 +377,7 @@
 		</div>
 		<div class="shadow">
 			<div style="align-self: center;">
-				<p id="p">*</p>
+				<p id="p0">*</p>
 				<p id="p1">*</p>
 				<p id="p2">*</p>
 				<p id="p3">*</p>
@@ -405,15 +405,17 @@
 		let tg = window.Telegram.WebApp;
 		let start = document.getElementById("buttongreen");
 		let stop = document.getElementById("buttonred");
-		let value = Math.floor(Math.random() * 12);
+		let value = Math.floor(Math.random() * 13);
 		value.toString()
 		let luck = ("p"+value)
 
 		start.addEventListener("click", () => {
 			function x1() {
 				document.getElementById(luck).style.background = "limegreen";
+				setTimeout(x1, 300);
+				let value = Math.floor(Math.random() * 13);
+				document.getElementById(luck).style.background = "limegreen";
 			}
-			setTimeout(x1, 300);
 			console.log(luck)
 		
 		});
