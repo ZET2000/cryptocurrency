@@ -413,62 +413,69 @@
 			timedInfo();
 			function timedInfo() {
 				setTimeout(x1, 1000);
-				setTimeout(x2, 1100);
-				setTimeout(x3, 1200);
-				setTimeout(x4, 1300);
-				setTimeout(x5, 1400);
-				setTimeout(x6, 1500);
-				setTimeout(x7, 1600);
-				setTimeout(x8, 1700);
+				setTimeout(x2, 2000);
+				setTimeout(x3, 3000);
+				setTimeout(x4, 4000);
+				setTimeout(x5, 5000);
+				setTimeout(x6, 6000);
+				setTimeout(x7, 7000);
+				setTimeout(x8, 8000);
 			function x1() {
 				let value = Math.floor(Math.random() * 13);
 				value.toString()
 				let luck = ("p"+value)
 				document.getElementById(luck).style.background = "limegreen";
-				document.getElementById(luck).style.background = "grey";
 			}
 			function x2() {
 				let value1 = Math.floor(Math.random() * 13);
 				value1.toString()
 				let luck1 = ("p"+value1)
 				document.getElementById(luck1).style.background = "limegreen";
-				document.getElementById(luck1).style.background = "grey";
+				document.getElementById(luck).style.background = "grey";
 			}
 			function x3() {
 				let value2 = Math.floor(Math.random() * 13);
 				value2.toString()
 				let luck2 = ("p"+value2)
 				document.getElementById(luck2).style.background = "limegreen";
+				document.getElementById(luck1).style.background = "grey";
 			}
 			function x4() {
 				let value3 = Math.floor(Math.random() * 13);
 				value3.toString()
 				let luck3 = ("p"+value3)
 				document.getElementById(luck3).style.background = "limegreen";
+				document.getElementById(luck2).style.background = "grey";
 			}
 			function x5() {
 				let value4 = Math.floor(Math.random() * 13);
 				value4.toString()
 				let luck4 = ("p"+value4)
 				document.getElementById(luck4).style.background = "limegreen";
+				document.getElementById(luck3).style.background = "grey";
 			}
 			function x6() {
 				let value5 = Math.floor(Math.random() * 13);
 				value5.toString()
 				let luck5 = ("p"+value5)
 				document.getElementById(luck5).style.background = "limegreen";
+				document.getElementById(luck4).style.background = "grey";
 			}
 			function x7() {
 				let value6 = Math.floor(Math.random() * 13);
 				value6.toString()
 				let luck6 = ("p"+value6)
 				document.getElementById(luck6).style.background = "limegreen";
+				document.getElementById(luck5).style.background = "grey";
 			}
 			function x8() {
 				let value7 = Math.floor(Math.random() * 13);
 				value7.toString()
 				let luck7 = ("p"+value7)
 				document.getElementById(luck7).style.background = "limegreen";
+				document.getElementById(luck6).style.background = "grey";
+				document.getElementById(luck7).style.background = "grey";
+
 			}
 
 		}
@@ -477,12 +484,6 @@
 		});
 	</script>
 
-
-
-
-
-</body>
-</html>
 
 
 
