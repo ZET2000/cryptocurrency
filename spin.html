@@ -411,12 +411,15 @@
 
 		start.addEventListener("click", () => {
 			function x1() {
-				document.getElementById(luck).style.background = "limegreen";
-				setTimeout(x1, 300);
 				let value = Math.floor(Math.random() * 13);
 				document.getElementById(luck).style.background = "limegreen";
 			}
-			console.log(luck)
+			setTimeout(x1, 200);
+			function x2(argument) {
+				let value = Math.floor(Math.random() * 13);
+				document.getElementById(luck).style.background = "limegreen";
+			}
+			setTimeout(x2, 200)
 		
 		});
 	</script>
@@ -427,7 +430,6 @@
 
 </body>
 </html>
-
 
 
 
