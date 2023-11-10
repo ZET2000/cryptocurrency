@@ -295,6 +295,19 @@
 
 
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script>
+		let tg = window.Telegram.WebApp;
+		let start = document.getElementById("buttongreen");
+		let stop = document.getElementById("buttonred");
+
+		start.addEventListener("click", () => {
+			document.getElementById("p").textContent = "?"
+			document.getElementById("p1").textContent = "*"
+			document.getElementById("p2").textContent = "$"
+			document.getElementById("p3").textContent = "+"
+			document.getElementById("p4").textContent = "#"
+		});
+	</script>
 
 
 
@@ -302,6 +315,8 @@
 
 </body>
 </html>
+
+
 
 
 
