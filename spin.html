@@ -405,12 +405,15 @@
 		let tg = window.Telegram.WebApp;
 		let start = document.getElementById("buttongreen");
 		let stop = document.getElementById("buttonred");
+		let value = Math.floor(Math.random() * 12);
+		value.toString()
+		let luck = ("p"+value)
 
 		start.addEventListener("click", () => {
 			function x1() {
-				document.getElementById("p").style.background = "limegreen";
+				document.getElementById(luck).style.background = "limegreen";
 			}
-			setTimeout(x1, 1000);
+			setTimeout(x1, 300);
 		
 		});
 	</script>
@@ -421,6 +424,9 @@
 
 </body>
 </html>
+
+
+
 
 
 
