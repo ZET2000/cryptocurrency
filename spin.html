@@ -412,25 +412,27 @@
 		start.addEventListener("click", () => {
 			timedInfo();
 			function timedInfo() {
-				setTimeout(x1, 100);
-				setTimeout(x2, 200);
-				setTimeout(x3, 300);
-				setTimeout(x4, 400);
-				setTimeout(x5, 500);
-				setTimeout(x6, 600);
-				setTimeout(x7, 700);
-				setTimeout(x8, 800);
+				setTimeout(x1, 1000);
+				setTimeout(x2, 1100);
+				setTimeout(x3, 1200);
+				setTimeout(x4, 1300);
+				setTimeout(x5, 1400);
+				setTimeout(x6, 1500);
+				setTimeout(x7, 1600);
+				setTimeout(x8, 1700);
 			function x1() {
 				let value = Math.floor(Math.random() * 13);
 				value.toString()
 				let luck = ("p"+value)
 				document.getElementById(luck).style.background = "limegreen";
+				document.getElementById(luck).style.background = "grey";
 			}
 			function x2() {
 				let value1 = Math.floor(Math.random() * 13);
 				value1.toString()
 				let luck1 = ("p"+value1)
 				document.getElementById(luck1).style.background = "limegreen";
+				document.getElementById(luck1).style.background = "grey";
 			}
 			function x3() {
 				let value2 = Math.floor(Math.random() * 13);
@@ -481,6 +483,7 @@
 
 </body>
 </html>
+
 
 
 
