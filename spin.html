@@ -121,9 +121,11 @@
 			height: auto;
 			box-shadow: inset 0px 0px 0px 0px black;
 			text-align: center;
-			width: auto;
+			width: 0 auto;
 			padding: 5px;
 			float: left;
+			margin-bottom: 15px;
+
 
 
 
@@ -134,12 +136,14 @@
 			font-size: 30px;
 			font-family: sans-serif;
 			text-align: center;
-			background: skyblue;
+			background: grey;
 			border-radius: 10px;
 			width: 45px;
 			height: 35px;
-			margin: 5px;
+			margin: 3px;
 			float: left;
+			align-self: center;
+			border: 2px solid dimgrey;
 
 
 		}
@@ -148,13 +152,15 @@
 			color: white;
 			font-size: 30px;
 			font-family: sans-serif;
-			background: orange;
+			background: grey;
 			border-radius: 10px;
 			width: 45px;
 			height: 35px;
-			margin: 5px;
+			margin: 3px;
 			align-content: center;
 			float: left;
+			align-self: center;
+			border: 2px solid dimgrey;
 
 
 		}
@@ -163,13 +169,15 @@
 			color: white;
 			font-size: 30px;
 			font-family: sans-serif;
-			background: limegreen;
+			background: grey;
 			border-radius: 10px;
 			width: 45px;
 			height: 35px;
-			margin: 5px;
+			margin: 3px;
 			align-content: center;
 			float: left;
+			align-self: center;
+			border: 2px solid dimgrey;
 
 
 		}
@@ -178,13 +186,15 @@
 			color: white;
 			font-size: 30px;
 			font-family: sans-serif;
-			background: yellowgreen;
+			background: grey;
 			border-radius: 10px;
 			width: 45px;
 			height: 35px;
-			margin: 5px;
+			margin: 3px;
 			align-content: center;
 			float: left;
+			align-self: center;
+			border: 2px solid dimgrey;
 
 
 		}
@@ -193,14 +203,33 @@
 			color: white;
 			font-size: 30px;
 			font-family: sans-serif;
-			background: seagreen;
+			background: grey;
 			border-radius: 10px;
 			width: 45px;
 			height: 35px;
-			margin: 5px;
+			margin: 3px;
 			align-content: center;
 			float: left;
+			align-self: center;
+			border: 2px solid dimgrey;
 
+
+		}
+
+
+		#p5 {
+			color: white;
+			font-size: 30px;
+			font-family: sans-serif;
+			background: darkcyan;
+			border-radius: 10px;
+			width: 200px;
+			height: 35px;
+			margin: 3px;
+			align-content: center;
+			float: left;
+			align-self: center;
+			border: 3px solid black;
 
 		}
 
@@ -243,11 +272,19 @@
 			<h1>Рулетка+</h1>
 		</div>
 		<div class="shadow">
-			<p id="p">1</p>
-			<p id="p1">0</p>
-			<p id="p2">1.5</p>
-			<p id="p3">1.2</p>
-			<p id="p4">2</p>
+			<div style="align-self: center;">
+				<p id="p">x1</p>
+				<p id="p1">0</p>
+				<p id="p2">1.5</p>
+				<p id="p3">1.2</p>
+				<p id="p4">x2</p>
+				<p id="p1">0</p>
+				<p id="p">x1</p>
+				<p id="p3">1.2</p>
+				<p id="p">x1</p>
+				<p id="p1">0</p>
+
+			</div>	
 		</div>
 		<div>
 			<p id="info">Рулетка+ - быстрая игра, в течении 10 секунд нажмете Stop, после окончания таймера ваш коэффицент будет равен 0</p>
