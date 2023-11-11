@@ -422,7 +422,7 @@
 				setTimeout(x9, 9000);
 				setTimeout(x10, 10000);
 				setTimeout(x11, 11000);
-				setTimeout(x12, 12000);
+				setTimeout(x12, 11300);
 			function x1() {
 				let value = Math.floor(Math.random() * 13);
 				value.toString()
@@ -488,13 +488,13 @@
 				let value10 = Math.floor(Math.random() * 13);
 				value10.toString()
 				let luck10 = ("p"+value10)
-				document.getElementById(luck10).style.background = "orange";
+				document.getElementById(luck10).style.background = "limegreen";
 			}
 			function x12() {
 				let value11 = Math.floor(Math.random() * 13);
 				value11.toString()
 				let luck11 = ("p"+value11)
-				document.getElementById(luck11).style.background = "limegreen";
+				document.getElementById(luck11).style.background = "grey";
 				let price = Math.floor(Math.random() * 21);
 				if (price > 10) {
 					tg.sendData("x1");
@@ -508,7 +508,7 @@
 					tg.sendData("x0");
 					tg.close();
 				}
-				if (price == 20) {
+				if (price > 19) {
 					tg.sendData("x2");
 					tg.close();
 				};
@@ -526,6 +526,8 @@
 
 </body>
 </html>
+
+
 
 
 
