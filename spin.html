@@ -496,20 +496,20 @@
 				let luck11 = ("p"+value11)
 				document.getElementById(luck11).style.background = "limegreen";
 				let price = Math.floor(Math.random() * 21);
-				if (price > 15) {
-					tg.sendData("0.5");
+				if (price > 10) {
+					tg.sendData("x1");
 					tg.close();
 				}
 				if (price == 1) {
-					tg.sendData("1.5");
+					tg.sendData("x3");
 					tg.close();
 				}
-				if (price < 5) {
-					tg.sendData("0");
+				if (price < 10) {
+					tg.sendData("x0");
 					tg.close();
 				}
 				if (price == 20) {
-					tg.sendData("1");
+					tg.sendData("x2");
 					tg.close();
 				};
 			};
