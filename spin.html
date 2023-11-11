@@ -500,16 +500,20 @@
 					tg.sendData("x1");
 					tg.close();
 				}
-				if (price == 1) {
+				else if (price == 1) {
 					tg.sendData("x3");
 					tg.close();
 				}
-				if (price < 10) {
+				else if (price < 10) {
 					tg.sendData("x0");
 					tg.close();
 				}
-				if (price > 19) {
+				else if (price > 19) {
 					tg.sendData("x2");
+					tg.close();
+				}
+				else {
+					tg.sendData("x1");
 					tg.close();
 				};
 			};
@@ -526,6 +530,7 @@
 
 </body>
 </html>
+
 
 
 
