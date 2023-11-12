@@ -496,8 +496,8 @@
 				let luck11 = ("p"+value11)
 				document.getElementById(luck11).style.background = "grey";
 				let price = Math.floor(Math.random() * 21);
-				
-				if (price < 10 && price > 17) {
+
+				if (price < 10) {
 					tg.sendData("x1");
 					tg.close();
 				}
@@ -513,6 +513,10 @@
 					tg.sendData("x2");
 					tg.close();
 				}
+				else {
+					tg.sendData("x2");
+					tg.close();
+				};
 
 
 			};
@@ -529,6 +533,8 @@
 
 </body>
 </html>
+
+
 
 
 
