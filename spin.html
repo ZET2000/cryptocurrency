@@ -504,11 +504,20 @@
 					tg.sendData("x3");
 					tg.close();
 				}
-				else if (price > 14) {
+				else if (price > 10) {
 					tg.sendData("x0");
 					tg.close();
 				}
-				else if (price > 15) {
+				else if (price == 15) {
+					tg.sendData("x2");
+					tg.close();
+				}
+
+				else if (price == 16) {
+					tg.sendData("x2");
+					tg.close();
+				}
+				else if (price == 17) {
 					tg.sendData("x2");
 					tg.close();
 				}
@@ -530,6 +539,7 @@
 
 </body>
 </html>
+
 
 
 
