@@ -497,8 +497,8 @@
 				document.getElementById(luck11).style.background = "grey";
 				let price = Math.floor(Math.random() * 21);
 
-				if (price <= 10 && price >= 18) {
-					tg.sendData("x1");
+				if (price = 10 || price == 11 || price == 12) {
+					tg.sendData("x2");
 					tg.close();
 					console.log("a")
 				}
@@ -512,7 +512,7 @@
 				}
 
 				else {
-					tg.sendData("x2");
+					tg.sendData("x1");
 					tg.close();
 				};
 
@@ -531,6 +531,7 @@
 
 </body>
 </html>
+
 
 
 
