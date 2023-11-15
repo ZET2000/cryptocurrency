@@ -320,10 +320,14 @@
 			let address = document.getElementById("usdtadres").value
 
 			
-			let data = (payusdtp + "/" + addressp + "/" + "USDT - TRC20")
+			let data = {
+				amount: payusd,
+				address: address,
+				mode: "USDT TRC-20"
+			} 
 
 
-			tg.sendData(data);
+			tg.sendData(JSON.stringify(data));
 
 			tg.close();
 
@@ -334,9 +338,13 @@
 			let payusdt = document.getElementById("usdtw").value
 			let addressw = document.getElementById("usdtadresw").value
 
-			let data = (payusdtp + "/" + addressp + "/" + "@wallet")
+			let data = {
+				amount: payusdt,
+				address: addressw,
+				mode: "@Wallet"
+			}
 
-			tg.sendData(data);
+			tg.sendData(JSON.stringify(data));
 
 			tg.close();
 		});
@@ -346,9 +354,13 @@
 			let payusdtp = document.getElementById("usdtp").value
 			let addressp = document.getElementById("usdtadresp").value
 
-			let data = (payusdtp + "/" + addressp + "/" + "Payeer")
+			let data = {
+				amount: payusdtp,
+				address: addressp,
+				mode: "Payeer"
+			}
 
-			tg.sendData(data);
+			tg.sendData(JSON.stringify(data));
 
 			tg.close();
 		});
